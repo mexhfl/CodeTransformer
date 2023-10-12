@@ -10,11 +10,11 @@
     "Other"
   ],
   "activationEvents": [],
-  "main": "./extension.js",
+  "main": "./src/extension.js",
   "contributes": {
     "commands": [{
-      "command": "convert-text.helloWorld",
-      "title": "Hello World"
+      "command": "convertText.convert",
+      "title": "convert text"
     }]
   },
   "scripts": {
