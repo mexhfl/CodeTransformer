@@ -12,10 +12,65 @@
   "activationEvents": [],
   "main": "./src/extension.js",
   "contributes": {
-    "commands": [{
-      "command": "convertText.convert",
-      "title": "convert text"
-    }]
+    "configuration": {
+      "title": "%configuration.title%",
+      "properties": {
+        "CodeTransformer.buildInFunctions": {
+          "type": "array",
+          "default": [],
+          "description": "%configuration.buildInFunctions.description%",
+          "items": {
+            "type": "object",
+            "properties": {
+              "name": {
+                "type": "string",
+                "description": "The name of the function."
+              },
+              "code": {
+                "type": "string",
+                "description": "The JavaScript code for the function."
+              }
+            },
+            "required": [
+              "name",
+              "code"
+            ]
+          }
+        },
+        "CodeTransformer.presetExpressions": {
+          "type": "array",
+          "default": [],
+          "description": "%configuration.presetExpressions.description%",
+          "items": {
+            "type": "object",
+            "properties": {
+              "name": {
+                "type": "string",
+                "description": "The name of the script."
+              },
+              "code": {
+                "type": "string",
+                "description": "The JavaScript code for the script."
+              }
+            },
+            "required": [
+              "name",
+              "script"
+            ]
+          }
+        }
+      }
+    },
+    "commands": [
+      {
+        "command": "CodeTransformer.CodeExpression",
+        "title": "transform code extension"
+      },
+      {
+        "command": "CodeTransformer.PickExpression",
+        "title": "transform pick extension"
+      }
+    ]
   },
   "scripts": {
     "lint": "eslint .",

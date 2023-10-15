@@ -1,0 +1,7 @@
+{
+  "configuration.title": "代码转换",
+  "configuration.buildInFunctions.title": "内置函数",
+  "configuration.buildInFunctions.description": "您可以在您的表达式中调用内置函数。",
+  "configuration.presetExpressions.title": "预设表达式",
+  "configuration.presetExpressions.description": "您可以快速调用预设的表达式。"
+}

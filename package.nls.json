@@ -1,0 +1,7 @@
+{
+  "configuration.title": "code-transformer",
+  "configuration.buildInFunctions.title": "Built-In Functions",
+  "configuration.buildInFunctions.description": "Configure the built-in functions for manipulating lines in the editor.",
+  "configuration.presetExpressions.title": "Preset Scripts",
+  "configuration.presetExpressions.description": "Configure preset scripts for quick transformations in the editor."
+}

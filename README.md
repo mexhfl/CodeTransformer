@@ -12,6 +12,32 @@ For example if there is an image subfolder under your extension project workspac
 
 > Tip: Many popular extensions utilize animations. This is an excellent way to show off your extension! We recommend short, focused animations that are easy to follow.
 
+内置函数
+buildInFunctions
+您可以在您的表达式中调用内置函数。
+
+eg:
+[
+    {
+        "name": "toSnakeCase",
+        "code":"(str)=>{return str.replace(/([A-Z])/g,'_$1').toLowerCase()}"
+    }
+]
+
+
+预设表达式
+presetExpressions
+您可以快速调用预设的表达式。
+
+eg:
+[
+    {
+        "name": "toSnakeCaseExp",
+        "code": "f.toSnakeCase(s)"
+    }
+]
+
+
 ## Requirements
 
 If you have any requirements or dependencies, add a section describing those and how to install and configure them.
