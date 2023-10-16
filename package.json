@@ -1,6 +1,6 @@
 {
-  "name": "convert-text",
-  "displayName": "convert-text",
+  "name": "code-transformer",
+  "displayName": "code-transformer",
   "description": "",
   "version": "0.0.1",
   "engines": {
@@ -24,11 +24,11 @@
             "properties": {
               "name": {
                 "type": "string",
-                "description": "The name of the function."
+                "description": "%configuration.buildInFunctions.name%"
               },
               "code": {
                 "type": "string",
-                "description": "The JavaScript code for the function."
+                "description": "%configuration.buildInFunctions.code%"
               }
             },
             "required": [
@@ -46,11 +46,11 @@
             "properties": {
               "name": {
                 "type": "string",
-                "description": "The name of the script."
+                "description": "%configuration.presetExpressions.name%"
               },
               "code": {
                 "type": "string",
-                "description": "The JavaScript code for the script."
+                "description": "%configuration.presetExpressions.code%"
               }
             },
             "required": [
@@ -78,13 +78,16 @@
     "test": "node ./test/runTest.js"
   },
   "devDependencies": {
-    "@types/vscode": "^1.83.0",
     "@types/mocha": "^10.0.2",
     "@types/node": "18.x",
+    "@types/vscode": "^1.83.0",
+    "@vscode/test-electron": "^2.3.4",
     "eslint": "^8.50.0",
     "glob": "^10.3.3",
     "mocha": "^10.2.0",
-    "typescript": "^5.2.2",
-    "@vscode/test-electron": "^2.3.4"
+    "typescript": "^5.2.2"
+  },
+  "dependencies": {
+    "vscode-nls": "^5.2.0"
   }
 }

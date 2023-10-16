@@ -1,7 +1,12 @@
 {
-  "configuration.title": "code-transformer",
+  "configuration.title": "Code Transformer",
   "configuration.buildInFunctions.title": "Built-In Functions",
   "configuration.buildInFunctions.description": "Configure the built-in functions for manipulating lines in the editor.",
+  "configuration.buildInFunctions.name": "The name of the function.",
+  "configuration.buildInFunctions.code": "The JavaScript code for the function.",
   "configuration.presetExpressions.title": "Preset Scripts",
-  "configuration.presetExpressions.description": "Configure preset scripts for quick transformations in the editor."
+  "configuration.presetExpressions.description": "Configure preset scripts for quick transformations in the editor.",
+  "configuration.presetExpressions.name": "The name of the preset expression.",
+  "configuration.presetExpressions.code": "The JavaScript code for the preset expression.",
+  "dialog.expression.prompt": "available parameters: (s for current line text, l for current line number, f for built-in functions) => {}"
 }

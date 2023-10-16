@@ -1,7 +1,13 @@
 {
-  "configuration.title": "代码转换",
+  "configuration.title": "Code Transformer",
   "configuration.buildInFunctions.title": "内置函数",
-  "configuration.buildInFunctions.description": "您可以在您的表达式中调用内置函数。",
+  "configuration.buildInFunctions.description": "内置函数：您可以在您的表达式中调用内置函数。\n 您可以通过transform code extension命令编写运行表达式，并在表达式中调用内置函数。\n 如：{\"name\":\"toSnakeCase\",\"code\":\"Javascript Functions Code ...\"}\n 注：code中的代码需要转为单行字符串。",
+  "configuration.buildInFunctions.name": "函数名称",
+  "configuration.buildInFunctions.code": "Javascript函数代码（需要转为单行字符串）",
   "configuration.presetExpressions.title": "预设表达式",
-  "configuration.presetExpressions.description": "您可以快速调用预设的表达式。"
+  "configuration.presetExpressions.description": "预设表达式：定义预设表达式之后，可以在列表中快速选择。\n 您可以通过transform pick extension命令快速选择预设表达式。\n 如：{\"name\":\"toSnakeCaseExp\",\"code\":\"f.toSnakeCase(s)\"} \n 注：code中的代码需要转为单行字符串。",
+  "configuration.presetExpressions.name": "预设表达式名称",
+  "configuration.presetExpressions.code": "预设表达式代码（需要转为单行字符串）",
+  "dialog.expression.prompt": "表达式中可使用的参数：(s 当前行文本,l 当前行号,f 内置函数)=>{}",
+  "myString": "测试测试"
 }

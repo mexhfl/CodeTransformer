@@ -1,12 +1,10 @@
 const vscode = require('vscode');
-const builtInFunctions = require('../presets/base')
 const { convertText } = require('./convert');
-
 
 const codeExp = async () => {
     const expression = await vscode.window.showInputBox({
         placeHolder: "s.toLowerCase()",
-        prompt: "ConvertText:s curr line text,l curr line num,f buildIn functions"
+        prompt: "available parameters: (s for current line text, l for current line number, f for built-in functions) => {}"
     });
 
     convertText(expression)

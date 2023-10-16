@@ -1,6 +1,6 @@
-# convert-text README
+# code-transformer README
 
-This is the README for your extension "convert-text". After writing up a brief description, we recommend including the following sections.
+This is the README for your extension "code-transformer". After writing up a brief description, we recommend including the following sections.
 
 ## Features
 

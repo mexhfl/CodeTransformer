@@ -3,7 +3,7 @@ const {codeExp} = require('./core/codeExp');
 const {pickExp} = require('./core/pickExp');
 
 function activate(context) {
-	console.log('Congratulations, your extension "convert-text" is now active!');
+	console.log('Congratulations, your extension "code-transformer" is now active!');
 
 	let disposable1 = vscode.commands.registerCommand('CodeTransformer.CodeExpression', codeExp);
 	let disposable2 = vscode.commands.registerCommand('CodeTransformer.PickExpression', pickExp);
