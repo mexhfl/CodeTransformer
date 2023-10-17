@@ -1,8 +1,13 @@
 {
   "name": "code-transformer",
   "displayName": "code-transformer",
+  "publisher": "jindong",
   "description": "",
-  "version": "0.0.1",
+  "version": "0.0.2",
+  "icon": "assets/icon.jpg",
+  "author": {
+    "name": "wangjindong"
+  },
   "engines": {
     "vscode": "^1.83.0"
   },
@@ -89,5 +94,10 @@
   },
   "dependencies": {
     "vscode-nls": "^5.2.0"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mexhfl/CodeTransformer.git"
+  },
+  "homepage": "https://github.com/mexhfl/CodeTransformer.git"
 }

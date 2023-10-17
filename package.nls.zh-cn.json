@@ -8,6 +8,5 @@
   "configuration.presetExpressions.description": "预设表达式：定义预设表达式之后，可以在列表中快速选择。\n 您可以通过transform pick extension命令快速选择预设表达式。\n 如：{\"name\":\"toSnakeCaseExp\",\"code\":\"f.toSnakeCase(s)\"} \n 注：code中的代码需要转为单行字符串。",
   "configuration.presetExpressions.name": "预设表达式名称",
   "configuration.presetExpressions.code": "预设表达式代码（需要转为单行字符串）",
-  "dialog.expression.prompt": "表达式中可使用的参数：(s 当前行文本,l 当前行号,f 内置函数)=>{}",
-  "myString": "测试测试"
+  "dialog.expression.prompt": "表达式中可使用的参数：(s 当前行文本,l 当前行号,f 内置函数)=>{}"
 }

@@ -1,91 +1,74 @@
-# code-transformer README
+# Code Transformer
 
-This is the README for your extension "code-transformer". After writing up a brief description, we recommend including the following sections.
+"Code Transformer" is a Visual Studio Code extension that allows you to transform or process code by executing custom JavaScript expressions or preset expressions.
 
 ## Features
 
-Describe specific features of your extension including screenshots of your extension in action. Image paths are relative to this README file.
+### Basic Usage
 
-For example if there is an image subfolder under your extension project workspace:
+No configuration is required. Simply use the ``transform code extension`` command to manually input an expression.
 
-\!\[feature X\]\(images/feature-x.png\)
+#### Parameters
 
-> Tip: Many popular extensions utilize animations. This is an excellent way to show off your extension! We recommend short, focused animations that are easy to follow.
+The parameters that can be used in the expression are:
 
-内置函数
-buildInFunctions
-您可以在您的表达式中调用内置函数。
+- ``s``: Current line of text
+- ``l``: Current line number
+- ``f``: Built-in function object
 
-eg:
+#### Example: Reverse the current line of text
+
+1. Select the line of text you want to process.
+2. Open the command palette and execute the ``transform code extension`` command.
+3. In the input box that appears, type ``s.split('').reverse().join('')``.
+4. After execution, the selected line of text will be reversed.
+
+### Advanced Usage
+
+#### 1. Using Built-in Functions
+
+You can configure built-in functions in the settings panel to call these functions in expressions.
+
+##### Example: Configure a built-in function to transform text to snake_case
+
+1. Open settings and navigate to the Code Transformer settings.
+2. In the "Built-in Functions" section, add a new function, for example:
+
+```json
 [
     {
         "name": "toSnakeCase",
-        "code":"(str)=>{return str.replace(/([A-Z])/g,'_$1').toLowerCase()}"
+        "code": "(str) => { return str.replace(/([A-Z])/g, '_$1').toLowerCase(); }"
     }
 ]
+```
 
+3. Save the settings.
+4. Now you can use ``f.toSnakeCase(s)`` in the input box for the ``transform code extension`` command or in preset expressions.
 
-预设表达式
-presetExpressions
-您可以快速调用预设的表达式。
+#### 2. Using Preset Expressions
 
-eg:
+You can configure preset expressions in the settings panel for quick selection and execution.
+
+##### Example: Configure a preset expression
+
+1. Open settings and navigate to the Code Transformer settings.
+2. In the "Preset Expressions" section, add a new expression, for example:
+
+```json
 [
     {
         "name": "toSnakeCaseExp",
         "code": "f.toSnakeCase(s)"
     }
 ]
+```
 
+3. Save the settings.
+4. Now you can open the list of preset expressions (quickPick) via the ``transform pick extension`` command and choose this preset expression for execution.
 
-## Requirements
+## Support
 
-If you have any requirements or dependencies, add a section describing those and how to install and configure them.
+Licensed under the MIT License.
 
-## Extension Settings
-
-Include if your extension adds any VS Code settings through the `contributes.configuration` extension point.
-
-For example:
-
-This extension contributes the following settings:
-
-* `myExtension.enable`: Enable/disable this extension.
-* `myExtension.thing`: Set to `blah` to do something.
-
-## Known Issues
-
-Calling out known issues can help limit users opening duplicate issues against your extension.
-
-## Release Notes
-
-Users appreciate release notes as you update your extension.
-
-### 1.0.0
-
-Initial release of ...
-
-### 1.0.1
-
-Fixed issue #.
-
-### 1.1.0
-
-Added features X, Y, and Z.
-
----
-
-## Working with Markdown
-
-You can author your README using Visual Studio Code.  Here are some useful editor keyboard shortcuts:
-
-* Split the editor (`Cmd+\` on macOS or `Ctrl+\` on Windows and Linux)
-* Toggle preview (`Shift+Cmd+V` on macOS or `Shift+Ctrl+V` on Windows and Linux)
-* Press `Ctrl+Space` (Windows, Linux, macOS) to see a list of Markdown snippets
-
-## For more information
-
-* [Visual Studio Code's Markdown Support](http://code.visualstudio.com/docs/languages/markdown)
-* [Markdown Syntax Reference](https://help.github.com/articles/markdown-basics/)
-
-**Enjoy!**
+For any questions or suggestions, please contact us.
